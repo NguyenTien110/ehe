@@ -30,5 +30,4 @@ if (!process.env.CLAIM_PRIZE) throw new Error('CLAIM_PRIZE must be provided')
 export const CLAIM_PRIZE = process.env.CLAIM_PRIZE
 
 export const DEFAULT_ADDRESS = '0x0000000000000000000000000000000000000000'
-export const GAS = 500000
-export const GAS_PRICE = 2000000000000
+export const GAS = 300000
