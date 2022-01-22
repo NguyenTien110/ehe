@@ -8,7 +8,7 @@ const fusionAbi = require('../contract_abi/fusion.json')
 export let web3: Web3
 
 export let boxContract: Contract
-export let rune1Contract: Contract
+export let fusionContract: Contract
 
 export const connectWeb3 = async (provider: string) => {
     try {
@@ -17,7 +17,7 @@ export const connectWeb3 = async (provider: string) => {
         web3 = new Web3(new Web3.providers.HttpProvider(provider));
 
         boxContract = new web3.eth.Contract(boxAbi, BOX)
-        rune1Contract = new web3.eth.Contract(fusionAbi, FUSION)
+        fusionContract = new web3.eth.Contract(fusionAbi, FUSION)
     } catch (e) {
         throw e
     }
