@@ -11,6 +11,7 @@ scalar JSON
 
     type Mutation {
         open_boxes(amount: Int!, privateKey: String!): JSON
+        fusion(runeType: Int!, times: Int!, privateKey: String!): JSON
         approve_anything(privateKey: String!): JSON
     }
 `

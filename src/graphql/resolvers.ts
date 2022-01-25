@@ -1,3 +1,4 @@
+import { fusion } from "./mutations/fusion"
 import { open_boxes } from "./mutations/open_boxes"
 import { my_boxes } from "./queries/my_boxes"
 
@@ -8,7 +9,8 @@ export const resolvers = {
     },
 
     Mutation: {
-        open_boxes
+        open_boxes,
+        fusion
     }
     
 }
