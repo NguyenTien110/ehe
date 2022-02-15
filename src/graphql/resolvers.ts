@@ -1,3 +1,4 @@
+import { friendship_power } from "./mutations/friendship_power"
 import { fusion } from "./mutations/fusion"
 import { open_boxes } from "./mutations/open_boxes"
 import { my_boxes } from "./queries/my_boxes"
@@ -10,7 +11,8 @@ export const resolvers = {
 
     Mutation: {
         open_boxes,
-        fusion
+        fusion,
+        friendship_power
     }
     
 }

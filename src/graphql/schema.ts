@@ -13,5 +13,6 @@ scalar JSON
         open_boxes(amount: Int!, privateKey: String!): JSON
         fusion(runeType: Int!, times: Int!, privateKey: String!): JSON
         approve_anything(privateKey: String!): JSON
+        friendship_power(receiver: String!, privateKeys: [String!]): JSON
     }
 `
