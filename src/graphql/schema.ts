@@ -14,5 +14,6 @@ scalar JSON
         fusion(runeType: Int!, times: Int!, privateKey: String!): JSON
         approve_anything(privateKey: String!): JSON
         friendship_power(receiver: String!, privateKeys: [String!]): JSON
+        transfer_prl(amount: Float!, times: Int!, receiver: String!, privateKeys: [String!]): JSON
     }
 `

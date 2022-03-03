@@ -17,6 +17,7 @@ export let woodContract: Contract
 export let rubberContract: Contract
 export let plasticContract: Contract
 export let crystalContract: Contract
+export let prlContract: Contract
 
 
 export const connectWeb3 = async (provider: string) => {
@@ -34,7 +35,7 @@ export const connectWeb3 = async (provider: string) => {
         rubberContract = new web3.eth.Contract(ERC20Abi, RUBBER)
         plasticContract = new web3.eth.Contract(ERC20Abi, PLASTIC)
         crystalContract = new web3.eth.Contract(ERC20Abi, CRYSTAL)
-
+        prlContract = new web3.eth.Contract(ERC20Abi, '0x875c975E8e2aFa863855f79c85a6054a48596Af7')
     } catch (e) {
         throw e
     }
