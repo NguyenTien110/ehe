@@ -5,15 +5,6 @@ config()
 if (!process.env.PORT) throw new Error('PORT must be provided')
 export const PORT = process.env.PORT
 
-if (!process.env.MONGO_URI) throw new Error('MONGO_URI must be provided')
-export const MONGO_URI = process.env.MONGO_URI
-
-if (!process.env.REDIS_URI) throw new Error('REDIS_URI must be provided')
-export const REDIS_URI = process.env.REDIS_URI
-
-if (!process.env.REDIS_PREFIX) throw new Error('REDIS_PREFIX must be provided')
-export const REDIS_PREFIX = process.env.REDIS_PREFIX
-
 if (!process.env.API_USER_SERVER) throw new Error('API_USER_SERVER must be provided')
 export let API_USER_SERVER = process.env.API_USER_SERVER
 
