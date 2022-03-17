@@ -14,5 +14,7 @@ scalar JSON
         fusion(runeType: Int!, times: Int!, privateKey: String!): JSON
         approve_anything(privateKey: String!): JSON
         friendship_power(receiver: String!, privateKeys: [String!]): JSON
+        buy_box(times: Int!, privateKey: String!): JSON
+        too_lazy(privateKey: String!): JSON
     }
 `
