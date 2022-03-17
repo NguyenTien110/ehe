@@ -13,7 +13,6 @@ export async function fusion(root: any, args: any, ctx: any) {
 
         for (let i = 0; i < times; i++) {
             let res = await fusionRune(address, runeType)
-            console.log(res)
             if (res) {
                 successTimes++
             } else {

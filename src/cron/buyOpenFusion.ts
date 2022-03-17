@@ -9,8 +9,6 @@ export async function buyOpenFusion(privateKey: string) {
     try {
         const { address } = getAccountFromPrivateKey(privateKey)
         
-        console.log(privateKey);
-        
         // Buy box 5 times
         for (let i = 0; i < 5; i++) {
             await buyDiamondBox(address)
