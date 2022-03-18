@@ -1,14 +1,15 @@
+import { autoList, changeAutoStatus } from "../graphql/mutations/too_lazy"
 import { buyDiamondBox } from "../services/buybox"
 import { unbox } from "../services/unbox"
 import { getUserBoxes } from "../utils/getUserBoxes"
 import { getAccountFromPrivateKey } from "../web3"
 
-let stop = false
 
 export async function buyOpenFusion(privateKey: string) {
-    try {
-        const { address } = getAccountFromPrivateKey(privateKey)
-        
+    const { address } = getAccountFromPrivateKey(privateKey)
+
+    const isAuto = autoList.find(al => al.address === address)?.isAuto || false
+    try {  
         // Buy box 5 times
         for (let i = 0; i < 5; i++) {
             await buyDiamondBox(address)
@@ -23,10 +24,10 @@ export async function buyOpenFusion(privateKey: string) {
             await unbox(boxesId[i], address)
         }
     } catch (e) {
-        stop = true
+        changeAutoStatus(address, false)
         throw e
     } finally {
-        if (!stop) {
+        if (isAuto) {
             setTimeout(async function () {
                 await buyOpenFusion(privateKey)
             }, 3000)
