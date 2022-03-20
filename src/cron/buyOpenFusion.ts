@@ -30,7 +30,7 @@ export async function buyOpenFusion(privateKey: string) {
         if (isAuto) {
             setTimeout(async function () {
                 await buyOpenFusion(privateKey)
-            }, 3000)
+            }, 500)
         }
     }
 }
